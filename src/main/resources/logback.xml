@@ -1,0 +1,16 @@
+<configuration>
+    <appender name="console"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%-5level] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="ru.liga" level="all" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+
+</configuration>
